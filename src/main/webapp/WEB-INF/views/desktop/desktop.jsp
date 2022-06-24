@@ -1,4 +1,4 @@
-<%--
+<%@ page import="java.util.Date" %><%--
   Created by IntelliJ IDEA.
   User: gahyeon
   Date: 2022/06/24
@@ -8,19 +8,35 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <base href="${pageContext.request.contextPath}">
     <title>박가현의 노트북</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/common.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/desktop/desktop.css">
+    <% Date now = new Date(); %>
+    <link rel="stylesheet" type="text/css" href="/resources/css/common.css?v=<%=now.getTime()%>">
+    <link rel="stylesheet" type="text/css" href="/resources/css/desktop/desktop.css?v=<%=now.getTime()%>">
 </head>
 <body>
     <!-- Header 부분 -->
     <header id="main-header">
-        <nav>
-            <div class="system-menu"></div>
-            <div class="program-menu"></div>
-            <div class="date-menu"></div>
+        <nav class="header-nav">
+            <!-- 시스템 메뉴부분 -->
+            <ul class="menu-item-list system-menu">
+                <li class="menu-item item-icon"><img src="/resources/images/apple/apple-icon.png"/></li>
+                <li class="menu-item item-text text-bold">Chrome</li>
+                <li class="menu-item item-text">File</li>
+                <li class="menu-item item-text">Edit</li>
+            </ul>
+            <!-- 프로그램 아이콘메뉴 부분 -->
+            <ul class="menu-item-list program-menu">
+                <li class="menu-item item-icon apple-icon"></li>
+                <li class="menu-item item-icon apple-icon"></li>
+                <li class="menu-item item-icon apple-icon"></li>
+            </ul>
+            <!-- 날짜 메뉴 부분 -->
+            <ul class="menu-item-list date-menu">
+                <li class="menu-item item-text">6월 25일 (토) 02:42</li>
+            </ul>
         </nav>
     </header>
 

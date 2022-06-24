@@ -1,5 +1,16 @@
-
 /*** css reset code */
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('/resources/fonts/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IBMPlexSansKR';
+    src: url('/resources/fonts/IBMPlexSansKR-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -43,9 +54,27 @@ q:before, q:after {
 
 /*** common code */
 body {
+    font-family: IBMPlexSansKR;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     background-color: coral;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+@media all and (max-width: 320px) {
+    html { font-size: 13px; min-width: 320px; }
+}
+@media all and (min-width: 321px) and (max-width: 768px) {
+    html { font-size: 14px; }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    html { font-size: 15px; }
+}
+@media all and (min-width: 1025px) {
+    html { font-size: 17px; }
 }
 /* commmon code ***/

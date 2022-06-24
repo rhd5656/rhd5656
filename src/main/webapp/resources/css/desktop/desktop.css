@@ -1,7 +1,50 @@
+:root {
+    --header-height: 2.5vh;
+    --header-padding: 11px;
+}
 
 
+/*** header 부분  */
 #main-header {
     width: 100vw;
-    height: 5vh;
-    background-color: antiquewhite;
+    height: var(--header-height);
+    padding: var(--header-padding);
+    background-color: #5B2FADFF;
+    min-height: 13px;
 }
+#main-header .header-nav {
+    display: inline-block;
+    height: var(--header-height);
+    float: left;
+}
+#main-header .header-nav .menu-item-list.system-menu {
+    width: 50vw;
+}
+#main-header .header-nav .menu-item-list.program-menu {
+    width: 30vw;
+}
+#main-header .header-nav .menu-item-list.date-menu {
+    width: 20vw;
+}
+#main-header .header-nav .menu-item-list .menu-item {
+    display: inline-block;
+    width: auto;
+    height: var(--header-height);
+    padding: 0 7px 0 7px;
+    float: left;
+}
+#main-header .header-nav .menu-item-list .menu-item.item-icon
+{
+    width: var(--header-height);
+}
+#main-header .header-nav .menu-item-list .menu-item.item-icon img
+{
+    width: var(--header-height);
+}
+#main-header .header-nav .menu-item-list .menu-item.item-text {
+    font-size: 1rem;
+    line-height: var(--header-height);
+    color: #FFFFFF;
+}
+
+/* header 부분 ***/
