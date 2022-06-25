@@ -29,13 +29,14 @@
             </ul>
             <!-- 프로그램 아이콘메뉴 부분 -->
             <ul class="menu-item-list program-menu">
-                <li class="menu-item item-icon apple-icon"></li>
-                <li class="menu-item item-icon apple-icon"></li>
-                <li class="menu-item item-icon apple-icon"></li>
+                <li class="menu-item item-icon float-right responsive-show-768"><img src="/resources/images/common/more-icon.png"/></li>
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
             </ul>
             <!-- 날짜 메뉴 부분 -->
             <ul class="menu-item-list date-menu">
-                <li class="menu-item item-text">6월 25일 (토) 02:42</li>
+                <li class="menu-item item-text float-right">12월 31일 (토) 24:59</li>
             </ul>
         </nav>
     </header>
