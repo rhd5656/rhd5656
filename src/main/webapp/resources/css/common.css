@@ -53,12 +53,17 @@ q:before, q:after {
 /* css reset code ***/
 
 /*** common code */
+:root {
+    --default-font-color: #FFFFFF;
+    --desktop-background-image: url("/resources/images/apple/apple-background-desktop.jpg");
+    --mobile-background-image: url("/resources/images/apple/apple-background-mobile.jpg");
+}
 body {
     font-family: IBMPlexSansKR;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: coral;
+    color: var(--default-font-color);
 }
 
 .text-bold {
@@ -67,7 +72,9 @@ body {
 .text-align-right {
     text-align: right;
 }
-
+.text-align-center {
+    text-align: center;
+}
 .float-right {
     float: right !important;
 }
@@ -84,17 +91,24 @@ body {
     .responsive-show-768 { display: block !important; }
 
     .responsive-hide-1024 { display: none !important; }
+
+    #main-contents { background-image: var(--mobile-background-image); }
 }
 @media all and (min-width: 321px) and (max-width: 768px) {
     html { font-size: 13px; }
     .responsive-show-768 { display: block !important; }
-
     .responsive-hide-1024 { display: none !important; }
+
+    #main-contents { background-image: var(--mobile-background-image); }
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     html { font-size: 14px; }
+
+    #main-contents { background-image: var(--desktop-background-image); }
 }
 @media all and (min-width: 1025px) {
     html { font-size: 15px; }
+
+    #main-contents { background-image: var(--desktop-background-image); }
 }
 /* commmon code ***/

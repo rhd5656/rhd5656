@@ -1,16 +1,20 @@
 :root {
-    --main-header-width: 100wh;
+    --main-header-width: calc(100vw - calc(var(--main-header-padding) * 2));
     --main-header-height: calc(35px - calc(var(--main-header-padding) * 2));
     --main-header-padding: 7px;
+
+    --main-contents-width: calc(100vw - calc(var(--main-contents-padding) * 2));
+    --main-contents-height: calc(100vh - calc(var(--main-header-height) + calc(var(--main-header-padding) * 2)) - calc(var(--main-contents-padding) * 2));
+    --main-contents-padding: 10px;
 }
 
-/* header */
+/* header 부분 */
 #main-header {
     width: var(--main-header-width);
     height: var(--main-header-height);
     padding: var(--main-header-padding);
     max-height: 24px;
-    background-color: #492A91FF;
+    background: linear-gradient( to right, #492A91, #2c0c7c);
 }
 #main-header .header-nav {
     width: 100%;
@@ -21,7 +25,7 @@
     height: 100%;
     float: left;
 
-    --program-menu-width: 30%;
+    --program-menu-width: auto;
     --date-menu-width: 10rem;
 }
 #main-header .header-nav .menu-item-list.system-menu {
@@ -29,6 +33,7 @@
 }
 #main-header .header-nav .menu-item-list.program-menu {
     width: var(--program-menu-width);
+    float: right;
 }
 #main-header .header-nav .menu-item-list.date-menu {
     width: var(--date-menu-width);
@@ -55,4 +60,76 @@
     height: 100%;
     line-height: var(--main-header-height);
     color: #FFFFFF;
+}
+
+/* Contents 부분 */
+#main-contents {
+    width: var(--main-contents-width);
+    height: var(--main-contents-height);
+    padding: var(--main-contents-padding);
+
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#main-contents .file-dir-contents {
+    width: 100%;
+    height: 100%;
+}
+#main-contents .file-dir-contents .file-dir-content {
+    --file-dir-icon-width: calc(70px + calc(var(--file-dir-padding) * 2));
+    --file-dir-icon-height: var(--file-dir-icon-width);
+    --file-dir-text-width: var(--file-dir-icon-width);
+    --file-dir-text-height: 30px;
+    --file-dir-padding: 5px;
+    --file-dir-max-width: 100px;
+    --file-dir-min-width: calc(50px + calc(var(--file-dir-padding) * 2));
+
+    display: inline-block;
+    float: left;
+    width: var(--file-dir-icon-width);
+    height: calc(var(--file-dir-icon-height) + var(--file-dir-text-height));
+    padding: 5px;
+    max-width: var(--file-dir-max-width);
+    max-height: calc(var(--file-dir-max-width) + var(--file-dir-text-height));
+    margin: 10px;
+    min-width: var(--file-dir-min-width);
+}
+#main-contents .file-dir-contents .file-dir-content .file-dir-icon {
+    width: var(--file-dir-icon-width);
+    height: var(--file-dir-icon-height);
+    background-size: calc(var(--file-dir-icon-width) - 15px) calc(var(--file-dir-icon-height) - 15px);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#main-contents .file-dir-contents .file-dir-content .file-dir-icon.directory.empty {
+    background-image: url("/resources/images/common/empty-folder.png");
+}
+#main-contents .file-dir-contents .file-dir-content .directory.non-empty {
+    background-image: url("/resources/images/common/non-empty-folder.png");
+}
+#main-contents .file-dir-contents .file-dir-content .file {
+    background-image: url("/resources/images/profile/profile_photo.jpg");
+}
+#main-contents .file-dir-contents .file-dir-content .file-dir-text,
+#main-contents .file-dir-contents .file-dir-content .file-dir-text p {
+    /*width: var(--file-dir-text-width);*/
+    /*height: var(--file-dir-text-height);*/
+    width: auto;
+    height: auto;
+    font-size: 0.8rem;
+}
+#main-contents .file-dir-contents .file-dir-content .file-dir-text p {
+    padding: 5px;
+}
+#main-contents .file-dir-contents .file-dir-content:hover .file-dir-icon {
+    --file-dir-icon-hover-border: 3px;
+    width: calc(var(--file-dir-icon-width) - calc(var(--file-dir-icon-hover-border) * 2));
+    height: calc(var(--file-dir-icon-height) - calc(var(--file-dir-icon-hover-border) * 2));
+    background-color: #00000090;
+    border: 3px solid #66666690;
+    border-radius: 3px;
+}
+#main-contents .file-dir-contents .file-dir-content:hover .file-dir-text {
+    background-color: #2A85FF8E;
+    border-radius: 3px;
 }

@@ -27,28 +27,40 @@
                 <li class="menu-item item-text">File</li>
                 <li class="menu-item item-text">Edit</li>
             </ul>
-            <!-- 프로그램 아이콘메뉴 부분 -->
-            <ul class="menu-item-list program-menu">
-                <li class="menu-item item-icon float-right responsive-show-768"><img src="/resources/images/common/more-icon.png"/></li>
-                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
-                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
-                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
-            </ul>
             <!-- 날짜 메뉴 부분 -->
             <ul class="menu-item-list date-menu">
                 <li class="menu-item item-text float-right">12월 31일 (토) 24:59</li>
+            </ul>
+            <!-- 프로그램 아이콘메뉴 부분 -->
+            <ul class="menu-item-list program-menu">
+                <li class="menu-item item-icon float-right responsive-show-768"><img src="/resources/images/common/more-icon.png"/></li>
+
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
+                <li class="menu-item item-icon float-right responsive-hide-1024"><img src="/resources/images/apple/apple-icon.png"/></li>
             </ul>
         </nav>
     </header>
 
     <!-- Contents 부분 -->
     <section id="main-contents">
-        <article class="desktop-contents">
-            <div class="directory">
-                <p>한국방송통신대학교</p>
-            </div>
-            <div class="file">
-                <p>내사진.jpg</p>
+        <ol class="file-dir-contents">
+            <li class="file-dir-content">
+                <div class="file-dir-icon directory empty"></div>
+                <div class="file-dir-text"><p class="text-align-center">한국방송통신대학교</p></div>
+            </li>
+            <li class="file-dir-content">
+                <div class="file-dir-icon directory non-empty"></div>
+                <div class="file-dir-text"><p class="text-align-center">한국방송통신대학교</p></div>
+            </li>
+            <li class="file-dir-content">
+                <div class="file-dir-icon file"></div>
+                <div class="file-dir-text"><p class="text-align-center">내사진</p></div>
+            </li>
+        </ol>
+        <article class="program-contents">
+            <div class="program-window">
+
             </div>
         </article>
     </section>
