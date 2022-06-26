@@ -2,13 +2,69 @@
     --main-header-width: calc(100vw - calc(var(--main-header-padding) * 2));
     --main-header-height: calc(35px - calc(var(--main-header-padding) * 2));
     --main-header-padding: 7px;
+    --main-header-total-width: calc(var(--main-header-width) + (var(--main-header-padding) * 2));
+    --main-header-total-height: calc(var(--main-header-height) + (var(--main-header-padding) * 2));
 
     --main-contents-width: calc(100vw - calc(var(--main-contents-padding) * 2));
     --main-contents-height: calc(100vh - calc(var(--main-header-height) + calc(var(--main-header-padding) * 2)) - calc(var(--main-contents-padding) * 2));
     --main-contents-padding: 10px;
+    --main-contents-total-width: calc(var(--main-contents-width) + (var(--main-contents-padding) * 2));
+    --main-contents-total-height: calc(var(--main-contents-height) + (var(--main-contents-padding) * 2));
+
+    --program-content-width: 100%;
+    --program-content-height: 100%;
+    --program-content-top: var(--main-header-total-height);
+    --program-content-bottom: var(--main-footer-total-height);
+    --program-content-left: 0;
+    --program-max-height: calc(100vh - var(--main-header-total-height) - var(--main-footer-total-height) - var(--program-content-top));
+
+    --main-footer-width: auto;
+    --main-footer-height: 50px;
+    --main-footer-padding: 0px;
+    --main-footer-total-height: calc(var(--main-footer-height) + (var(--main-footer-padding) * 2))
+}
+@media all and (max-width: 320px) {
+    :root {
+        --program-content-width: 100vw;
+        --program-content-height: calc(100vh - var(--main-header-total-height) - var(--main-footer-total-height));
+        --program-content-top: var(--main-header-total-height);
+        --program-content-bottom: var(--main-footer-total-height);
+        --program-content-left: 0;
+    }
+    #main-contents { background-image: var(--mobile-background-image); }
+}
+@media all and (min-width: 321px) and (max-width: 768px) {
+    :root {
+        --program-content-width: 100vw;
+        --program-content-height: calc(100vh - var(--main-header-total-height) - var(--main-footer-total-height));
+        --program-content-top: var(--main-header-total-height);
+        --program-content-bottom: var(--main-footer-total-height);
+        --program-content-left: 0;
+    }
+    #main-contents { background-image: var(--mobile-background-image); }
+}
+@media all and (min-width: 769px) and (max-width: 1024px) {
+    :root {
+        --program-content-width: 80vw;
+        --program-content-height: 70vh;
+        --program-content-top: calc(5vh + var(--main-header-total-height));
+        --program-content-bottom: var(--main-footer-total-height);
+        --program-content-left: 10vw;
+    }
+    #main-contents { background-image: var(--desktop-background-image); }
+}
+@media all and (min-width: 1025px) {
+    :root {
+        --program-content-width: 80vw;
+        --program-content-height: 90vh;
+        --program-content-top: calc(10vh + var(--main-header-total-height));
+        --program-content-bottom: var(--main-footer-total-height);
+        --program-content-left: 10vw;
+    }
+    #main-contents { background-image: var(--desktop-background-image); }
 }
 
-/* header 부분 */
+/* ######################### header 부분 ######################### */
 #main-header {
     width: var(--main-header-width);
     height: var(--main-header-height);
@@ -62,7 +118,7 @@
     color: #FFFFFF;
 }
 
-/* Contents 부분 */
+/* ######################### Contents 부분 ######################### */
 #main-contents {
     width: var(--main-contents-width);
     height: var(--main-contents-height);
@@ -71,6 +127,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+/* ######################### file directory Contents 부분 ######################## */
 #main-contents .file-dir-contents {
     width: 100%;
     height: 100%;
@@ -132,4 +189,77 @@
 #main-contents .file-dir-contents .file-dir-content:hover .file-dir-text {
     background-color: #2A85FF8E;
     border-radius: 3px;
+}
+
+/* ######################### Program Contents 부분 ######################### */
+#main-contents .program-contents {
+    --program-contents-width: 100vw;
+    --program-contents-height: calc(100vh - calc(var(--main-header-padding) * 2));
+    --program-contents-top: calc(var(--main-header-height) + calc(var(--main-header-padding) * 2));
+
+}
+#main-contents .program-contents .program-content {
+    --program-header-width: 100%;
+    --program-header-height: 100%;
+    --program-header-width-gap: 100%;
+    --program-header-height-gap: 100%;
+    --program-header-padding: 10px;
+
+    width: var(--program-content-width);
+    height: var(--program-content-height);
+    top: var(--program-content-top);
+    bottom: var(--program-content-bottom);
+    left: var(--program-content-left);
+    max-height: var(--program-max-height);
+    position: fixed;
+    border-radius: 11px;
+    border: 1px solid #656565;
+}
+#main-contents .program-contents .program-content.vertical-content {
+    --program-header-width: calc(16% - (var(--program-header-padding) * 2));
+    --program-header-height: calc(100% - (var(--program-header-padding) * 2));
+    --program-header-width-gap: 16%;
+    --program-header-height-gap: 0%;
+}
+#main-contents .program-contents .program-content .program-header {
+    display: inline-block;
+    width: var(--program-header-width);
+    height: var(--program-header-height);
+    padding: var(--program-header-padding);
+    background-color: #33363fEB;
+    float: left;
+}
+#main-contents .program-contents .program-content .program-header.vertical-header {
+    width: calc(var(--program-header-width) - 1px);
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid #000000;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button {
+    display: inline-block;
+    width: 11px;
+    height: 11px;
+    border-radius: 10px;
+    float: left;
+    margin-left: 7px;
+    margin-top: 3px;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button.program-close-button {
+    background-color: #f35657;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button.program-minimal-button {
+    background-color: #dfc036;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button.program-maximal-button {
+    background-color: #43b83e;
+}
+#main-contents .program-contents .program-content .program-section {
+    --program-section-padding: 10px;
+
+    display: inline-block;
+    width: calc(100% - var(--program-header-width-gap) - (var(--program-section-padding) * 2));
+    height: calc(100% - var(--program-header-height-gap) - (var(--program-section-padding) * 2));
+    padding: var(--program-section-padding);
+    float: left;
+    background-color: #1f2022;
+    border-radius: 0 10px 10px 0;
 }

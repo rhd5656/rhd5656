@@ -50,6 +50,10 @@ q:before, q:after {
     content: '';
     content: none;
 }
+
+button{
+    background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer
+}
 /* css reset code ***/
 
 /*** common code */
@@ -91,24 +95,16 @@ body {
     .responsive-show-768 { display: block !important; }
 
     .responsive-hide-1024 { display: none !important; }
-
-    #main-contents { background-image: var(--mobile-background-image); }
 }
 @media all and (min-width: 321px) and (max-width: 768px) {
     html { font-size: 13px; }
     .responsive-show-768 { display: block !important; }
     .responsive-hide-1024 { display: none !important; }
-
-    #main-contents { background-image: var(--mobile-background-image); }
 }
 @media all and (min-width: 769px) and (max-width: 1024px) {
     html { font-size: 14px; }
-
-    #main-contents { background-image: var(--desktop-background-image); }
 }
 @media all and (min-width: 1025px) {
     html { font-size: 15px; }
-
-    #main-contents { background-image: var(--desktop-background-image); }
 }
 /* commmon code ***/

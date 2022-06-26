@@ -59,8 +59,14 @@
             </li>
         </ol>
         <article class="program-contents">
-            <div class="program-window">
-
+            <div class="program-content vertical-content">
+                <header class="program-header vertical-header">
+                    <button class="program-header-button program-close-button"></button>
+                    <button class="program-header-button program-minimal-button"></button>
+                    <button class="program-header-button program-maximal-button"></button>
+                </header>
+                <section class="program-section file-system-program">
+                </section>
             </div>
         </article>
     </section>
