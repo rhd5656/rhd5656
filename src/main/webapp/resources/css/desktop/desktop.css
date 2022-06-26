@@ -97,7 +97,7 @@
 #main-contents .file-dir-contents .file-dir-content .file-dir-icon {
     width: var(--file-dir-icon-width);
     height: var(--file-dir-icon-height);
-    background-size: calc(var(--file-dir-icon-width) - 15px) calc(var(--file-dir-icon-height) - 15px);
+    background-size: calc(var(--file-dir-icon-width) - 15px) auto;
     background-repeat: no-repeat;
     background-position: center;
 }
