@@ -242,15 +242,35 @@
     float: left;
     margin-left: 7px;
     margin-top: 3px;
+    font-size: 2px;
+    text-align: center;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button i {
+    display: none;
+    font-size: 1px;
+    text-align: center;
+    line-height: 11.4px;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button-group {
+    display: inline-block;
+    width: auto;
+    height: auto;
+}
+#main-contents .program-contents .program-content .program-header .program-header-button-group:hover .program-header-button i{
+    display: block;
 }
 #main-contents .program-contents .program-content .program-header .program-header-button.program-close-button {
     background-color: #f35657;
+    color: #7a2929;
 }
 #main-contents .program-contents .program-content .program-header .program-header-button.program-minimal-button {
     background-color: #dfc036;
+    color: #5e5118;
 }
 #main-contents .program-contents .program-content .program-header .program-header-button.program-maximal-button {
     background-color: #43b83e;
+    color: #184116;
+    transform: rotate(-45deg);
 }
 #main-contents .program-contents .program-content .program-section {
     --program-section-padding: 10px;

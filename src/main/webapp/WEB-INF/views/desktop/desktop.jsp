@@ -15,6 +15,8 @@
     <% Date now = new Date(); %>
     <link rel="stylesheet" type="text/css" href="/resources/css/common.css?v=<%=now.getTime()%>">
     <link rel="stylesheet" type="text/css" href="/resources/css/desktop/desktop.css?v=<%=now.getTime()%>">
+
+    <script src="https://kit.fontawesome.com/3246f746f9.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- Header 부분 -->
@@ -61,9 +63,11 @@
         <article class="program-contents">
             <div class="program-content vertical-content">
                 <header class="program-header vertical-header">
-                    <button class="program-header-button program-close-button"></button>
-                    <button class="program-header-button program-minimal-button"></button>
-                    <button class="program-header-button program-maximal-button"></button>
+                    <div class="program-header-button-group">
+                        <button class="program-header-button program-close-button"><i class="fa-solid fa-xmark"></i></button>
+                        <button class="program-header-button program-minimal-button"><i class="fa-solid fa-minus"></i></button>
+                        <button class="program-header-button program-maximal-button"><i class="fa-solid fa-sort"></i></button>
+                    </div>
                 </header>
                 <section class="program-section file-system-program">
                 </section>
