@@ -77,8 +77,17 @@
 
     <!-- Footer 부분 -->
     <footer id="main-footer">
-        <nav>
-            <div class="dock-nav"></div>
+        <nav class="footer-dock-nav">
+            <ul class="dock-item-list">
+                <li class="dock-item">
+                    <span class="title">Finder</span>
+                    <img src="/resources/images/apple/apple-finder-icon.png"><span class="active"></span>
+                </li>
+                <li class="dock-item">
+                    <span class="title">Google Chrome</span>
+                    <img src="/resources/images/apple/apple-googlechrome-icon.png"><span class="active"></span>
+                </li>
+            </ul>
         </nav>
     </footer>
 
