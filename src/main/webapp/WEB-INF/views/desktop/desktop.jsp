@@ -87,6 +87,10 @@
                     <span class="title">Google Chrome</span>
                     <img src="/resources/images/apple/apple-googlechrome-icon.png"><span class="active"></span>
                 </li>
+                <li class="dock-item">
+                    <span class="title">Google Chrome</span>
+                    <img src="/resources/images/apple/apple-googlechrome-icon.png"><span class="active"></span>
+                </li>
             </ul>
         </nav>
     </footer>

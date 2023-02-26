@@ -287,15 +287,14 @@
 #main-footer {
     position: fixed;
     bottom: 5px;
-    width: var(--main-footer-width);
+    width: auto;
     height: var(--main-footer-height);
+    left: 50%;
+    transform: translateX(-50%);
 }
 #main-footer .footer-dock-nav {
-    --footer-dock-nav: calc(var(--main-footer-width) / 1.5);
-
-    width: var(--footer-dock-nav);
+    width: auto;
     height: 100%;
-    margin-left: calc(calc(var(--main-footer-width) - var(--footer-dock-nav)) / 2);
     background: #FFFFFF27;
     border-radius: 17px;
     border: 1px solid #FFFFFF30;
